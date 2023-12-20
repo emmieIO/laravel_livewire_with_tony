@@ -2,8 +2,11 @@
 
 namespace App\Models;
 
+use App\Enums\StatusType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use App\Enums\PriorityType;
+
 
 class Task extends Model
 {
@@ -17,7 +20,16 @@ class Task extends Model
         'deadline'
     ];
 
-    public function user() : BelongsTo
+    protected $casts = [
+        'deadline' => 'date',
+        'status' => StatusType::class,
+        'priority' => PriorityType::class,
+  
+
+    ];
+
+
+    public function user()
     {
         return $this->belongsTo(User::class);
     }

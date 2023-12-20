@@ -7,7 +7,7 @@ enum StatusType : string
 {
     case pending =   'pending';
     case active =    'active';
-    case in_progress = 'in progress';
+    case in_progress = 'inprogress';
     case completed = 'completed';
     case cancelled = 'cancelled';
     
