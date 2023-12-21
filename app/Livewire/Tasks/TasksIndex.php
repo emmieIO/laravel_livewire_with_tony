@@ -8,15 +8,6 @@ use Livewire\Component;
 
 class TasksIndex extends Component
 {
-   public TaskForm $form;
-
-    public function save()
-    {
-        $this->validate();
-        $this->form->createTask();
-        $this->form->reset();
-        session()->flash('message', 'Task created');
-    }
 
     public function render()
     {
