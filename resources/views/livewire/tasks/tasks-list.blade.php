@@ -11,4 +11,7 @@
             <p class="mt-3">{{ $task->description }}</p>
         </div>
     @endforeach
+    <div class="mt-5">
+        {{$tasks->links()}}
+    </div>
 </div>
